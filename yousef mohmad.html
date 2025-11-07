@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بطاقة شخصية</title>
+  <style>
+    /* خلفية الصفحة */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* خلفية سوداء */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: "Tahoma", sans-serif;
+      direction: rtl;
+    }
+
+    /* البطاقة */
+    .profile-card {
+      background-color: #fff; /* المربع أبيض */
+      padding: 30px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+      max-width: 360px;
+      width: 90%;
+    }
+
+    /* صورة دائرية */
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #000;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* اسم المستخدم */
+    h1 {
+      color: #000;
+      font-size: 22px;
+      margin: 10px 0;
+      word-wrap: break-word;
+    }
+
+    /* أيقونات التواصل - دوائر سوداء مع الأيقونات الملونة كما في الروابط */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      background-color: #000;        /* دائرة سوداء */
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    /* مهم: لا نستخدم فلتر هنا حتى تبقى الأيقونات الملونة كما هي */
+    .social-icons a img {
+      width: 28px;   /* حجم الأيقونة داخل الدائرة */
+      height: 28px;
+      display: block;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-4px) scale(1.06);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    /* تصغير للموبايل */
+    @media (max-width: 500px) {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      .social-icons a {
+        width: 44px;
+        height: 44px;
+      }
+
+      .social-icons a img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="profile-pic">
+      <!-- ضع صورتك هنا -->
+      <img src="portrait.jpeg" alt="صورة يوسف محمد أحمد" />
+    </div>
+    <h1>يوسف محمد أحمد</h1>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/17a3btsKP6/" target="_blank" aria-label="Facebook">
+        <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/youseef_24636?igsh=OGZ4YmVkaXdwYzVm" target="_blank" aria-label="Instagram">
+        <img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@youseef_alkatb?_t=ZS-90eve0lgMJ0&_r=1" target="_blank" aria-label="TikTok">
+        <img src="https://img.icons8.com/color/48/000000/tiktok--v1.png" alt="TikTok" />
+      </a>
+    </div>
+  </div>
+</body>
+</html>
